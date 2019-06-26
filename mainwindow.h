@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "tetgen.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -18,14 +20,24 @@ public:
 private slots:
     void on_btn_openfile_clicked();
 
+    void on_btn_outFile_clicked();
+
 private:
     Ui::MainWindow *ui;
 
+
 private:
-    void loadModel(QString fileName);
-    QString getExtension(QString filePath);
+    QString filePath;
+    tetgenio input;
+    tetgenio output;
+private:
+    void loadModel();
+    QString getExtension();
+    QString getFileName();
+    void setSaveEnable();
 
     void alert(QString message);
+    void setStatus(QString status);
 };
 
 #endif // MAINWINDOW_H
