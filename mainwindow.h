@@ -34,7 +34,9 @@ private:
     void loadModel();
     QString getExtension();
     QString getFileName();
+    char* setCommandLine();
     void setSaveEnable();
+    void outputFile(QString fileName);
 
     void alert(QString message);
     void setStatus(QString status);

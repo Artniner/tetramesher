@@ -35,6 +35,19 @@
     <item>
      <layout class="QVBoxLayout" name="vlyt_checkbox">
       <item>
+       <widget class="QCheckBox" name="chk_preserve">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>preserve mesh</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QCheckBox" name="chk_nodes">
         <property name="enabled">
          <bool>false</bool>
