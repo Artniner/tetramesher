@@ -19,8 +19,11 @@ public:
 
 private slots:
     void on_btn_openfile_clicked();
-
     void on_btn_outFile_clicked();
+
+    void on_sld_quality_valueChanged(int value);
+
+    void on_spin_quality_valueChanged(double value);
 
 private:
     Ui::MainWindow *ui;

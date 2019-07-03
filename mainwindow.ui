@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>136</width>
-    <height>273</height>
+    <width>383</width>
+    <height>232</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -22,97 +22,169 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QVBoxLayout" name="vlyt_button">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="btn_openfile">
+       <layout class="QVBoxLayout" name="vlyot_checkbox">
+        <item>
+         <widget class="QCheckBox" name="chk_preserve">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>preserve mesh</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chk_nodes">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>nodes</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chk_faces">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>faces</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chk_elements">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>elements</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="vlyot_checkbox2">
+        <item>
+         <widget class="QCheckBox" name="chk_edges">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>edges</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chk_neighbors">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>neighbors</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chk_poly">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>poly</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="hlyot_quality">
+      <item>
+       <widget class="QLabel" name="lbl_quality">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
-         <string>Open File</string>
+         <string>Quality:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="sld_quality">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimum">
+         <number>100</number>
+        </property>
+        <property name="maximum">
+         <number>200</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>200</number>
+        </property>
+        <property name="sliderPosition">
+         <number>200</number>
+        </property>
+        <property name="tracking">
+         <bool>true</bool>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::NoTicks</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="spin_quality">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimum">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>2.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>2.000000000000000</double>
         </property>
        </widget>
       </item>
      </layout>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="vlyt_checkbox">
+     <layout class="QHBoxLayout" name="vlyot_button">
       <item>
-       <widget class="QCheckBox" name="chk_preserve">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
+       <widget class="QPushButton" name="btn_openfile">
         <property name="text">
-         <string>preserve mesh</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="chk_nodes">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>nodes</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="chk_faces">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>faces</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="chk_elements">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>elements</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="chk_poly">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>poly</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="chk_edges">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>edges</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="chk_neighbors">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>neighbors</string>
+         <string>Open File</string>
         </property>
        </widget>
       </item>
@@ -135,7 +207,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>136</width>
+     <width>383</width>
      <height>22</height>
     </rect>
    </property>
