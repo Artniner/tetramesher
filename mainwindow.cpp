@@ -132,6 +132,7 @@ char* MainWindow::setCommandLine()
     if(ui->chk_preserve->isChecked()) command+="Y";
     if(ui->chk_edges->isChecked()) command+="e";
     if(ui->chk_neighbors->isChecked()) command+="n";
+    if(ui->chk_faces->isChecked()) command+="f";
 
     return strdup(command.toLatin1().data());
 }
